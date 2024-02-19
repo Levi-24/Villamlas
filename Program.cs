@@ -82,6 +82,22 @@ Console.WriteLine("Feladat 9.:");
 var villamSum = villamAdatok.Select(adat => adat.orankentiAdatok.Sum()).Take(20);
 Console.WriteLine(villamSum.Sum());
 
+
+
+
+Console.WriteLine("Feladat 10.:");
+int compare = 20000;
+for (int i = 0; i < 23; i++)
+{
+    var temp = villamAdatok.Select(adat => adat.orankentiAdatok[i]).Sum();
+    if (temp < compare) compare = temp;
+}
+Console.WriteLine(compare);
+
+
+
+
+
 Console.WriteLine("Feladat 11.:");
 var legtobbVillam7 = villamAdatok
     .Select((villam, index) => new { Nap = villam.nap, VillamCount = villam.orankentiAdatok.Max(), Ora = index + 1 })
