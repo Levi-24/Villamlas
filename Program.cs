@@ -74,6 +74,10 @@ Console.WriteLine();
 Console.WriteLine("----------Haladó Feladatok----------");
 Console.WriteLine();
 
+Console.WriteLine("Feladat 8.:");
+var Reggel2Sum = villamAdatok.Select(adat => adat.orankentiAdatok.Take(2).Sum());
+Console.WriteLine(Reggel2Sum.Sum());
+
 Console.WriteLine("Feladat 9.:");
 var villamSum = villamAdatok.Select(adat => adat.orankentiAdatok.Sum()).Take(20);
 Console.WriteLine(villamSum.Sum());
